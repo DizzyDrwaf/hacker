@@ -267,10 +267,12 @@ a {
   text-decoration: none;
 }
 
+/* Wrapper for code blocks */
 .code-wrapper {
   position: relative;
 }
 
+/* Copy button */
 .copy-btn {
   position: absolute;
   top: 0.25em;
@@ -281,9 +283,13 @@ a {
   background: #eee;
   cursor: pointer;
   border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #ddd;
 }
 
 .copy-btn:active {
   background: #ccc;
 }
-k
