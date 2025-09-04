@@ -266,3 +266,24 @@ a {
 #a-title {
   text-decoration: none;
 }
+
+.code-wrapper {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  padding: 0.2em 0.5em;
+  font-size: 0.75em;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.copy-btn:active {
+  background: #ccc;
+}
+k
