@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-    <script>alert("hej");</script>
-{% seo %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('code').forEach((block, i) => {
+          const btn = document.createElement('button');
+          btn.innerText = 'Copy';
+          btn.classList.add('copy-btn');
+          block.setAttribute('id', `code-block-${i}`);
+          block.parentNode.insertBefore(btn, block.nextSibling);
+        
+          btn.addEventListener('click', function () {
+            const code = block.innerText || block.textContent;
+            navigator.clipboard.writeText(code)
+              .then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1200);
+              })
+              .catch(() => {
+                btn.innerText = "Failed";
+              });
+          });
+        });
+      });
+    </script>
+
+    {% seo %}
   </head>
 
   <body>
