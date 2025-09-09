@@ -68,8 +68,7 @@ Det första du bör göra efter att du är klar med installationen är att kolla
 - Skapa en katalog för att lagra APT-arkivets nycklar:
 ```
 sudo install -d -m 0755 /etc/apt/keyrings
-```
-{: #code-example-1}
+```{: #code-example-1}
 - Importera Mozilla APT-arkivets signeringsnyckel:
 ```
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
